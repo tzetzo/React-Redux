@@ -1,6 +1,6 @@
 ```
 > git clone https://github.com/tzetzo/React-Redux.git
-> cd ReduxSimpleStarter
+> cd to the folder where local copy of the repo is
 > npm install
-> npm start
+> npm run startdev
 ```
