@@ -1,15 +1,17 @@
+const env = process.env.NODE_ENV || 'development';  //heroku will set NODE_ENV otherwise we set it locally
+console.log('env *****', env);
+if (env === 'development') {
+  process.env.PORT = 8080;
+}
+
+
 const express = require('express');
 const path = require('path');
-var cors = require('cors');
 
-const port = process.env.PORT || 8080; //process.env.PORT is provided by heroku
+const port = process.env.PORT; //process.env.PORT is provided by heroku
 const app = express();
 
 app.use(express.static(__dirname)); //provides a static website with bundle.js containing all JS code build by webpack
-app.use(cors({
-  origin: 'http://reduxblog.herokuapp.com',
-  optionsSuccessStatus: 200 // some legacy browsers (IE11, various SmartTVs) choke on 204
-}))
 
 app.get('*', (req, res) => { //sends the user index.html by default
   res.sendFile(path.resolve(__dirname, 'index.html'));
