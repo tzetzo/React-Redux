@@ -6,9 +6,9 @@ export const CREATE_POST = 'create_post';
 export const DELETE_POST = 'delete_post';
 
 if (window.location.hostname === 'localhost') {
-  const ROOT_URL = 'http://localhost:3000/api/posts'; //having this URL as http instead of https caused a "mixed content" error when deployed on heroku
+  var ROOT_URL = 'http://localhost:3000/api/posts'; //having this URL as http instead of https caused a "mixed content" error when deployed on heroku
 } else {
-  const ROOT_URL = 'https://boiling-ravine-15937.herokuapp.com/api/posts'//having this URL as http instead of https caused a "mixed content" error when deployed on heroku
+  var ROOT_URL = 'https://boiling-ravine-15937.herokuapp.com/api/posts'//having this URL as http instead of https caused a "mixed content" error when deployed on heroku
 }
 
 export function fetchPosts() {
