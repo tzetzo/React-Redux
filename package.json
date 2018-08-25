@@ -7,7 +7,7 @@
   "scripts": {
     "startdev": "node ./node_modules/webpack-dev-server/bin/webpack-dev-server.js",
     "postinstall": "webpack -p",
-    "start": "node server.js"
+    "startprod": "node server.js"
   },
   "engines": {
     "node": "8.11.3"
