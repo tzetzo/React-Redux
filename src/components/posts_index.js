@@ -24,7 +24,7 @@ class PostsIndex extends Component {
 
   render() {
     return (
-      <div>
+      <div className="jumbotron">
         <div className="table">
             <Link className="btn btn-primary  pull-xs-right" to="/posts/new">
               Add a Post

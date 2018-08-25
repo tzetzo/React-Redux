@@ -36,27 +36,29 @@ class PostsNew extends Component {
     const { handleSubmit } = this.props;  //passed to our component from reduxForm
 
     return (
-      <form onSubmit={handleSubmit(this.onSubmit.bind(this))}> {/*handleSubmit calls validate and if no errors our custom onSubmit is called*/}
-        <Field  //each Field represents an HTML input field
-          label="Title"   //will be passed to the field argument of the renderField function; you can pass as many arguments as you need
-          name="title"    //required;describes the piece of reduxForm state; needed by the reduxForm
-          component={this.renderField}  //required;connects the Field component to the component which will be rendered
-        />
-        <Field
-          label="Categories"
-          name="categories"
-          component={this.renderField}
-        />
-        <Field
-          label="Post content"
-          name="content"
-          component={this.renderField}
-        />
-        <button type="submit" className="btn btn-primary">Save</button>
-        <Link className="btn btn-danger" to="/">
-          Cancel
-        </Link>
-      </form>
+      <div className="jumbotron">
+        <form onSubmit={handleSubmit(this.onSubmit.bind(this))}> {/*handleSubmit calls validate and if no errors our custom onSubmit is called*/}
+          <Field  //each Field represents an HTML input field
+            label="Title"   //will be passed to the field argument of the renderField function; you can pass as many arguments as you need
+            name="title"    //required;describes the piece of reduxForm state; needed by the reduxForm
+            component={this.renderField}  //required;connects the Field component to the component which will be rendered
+          />
+          <Field
+            label="Categories"
+            name="categories"
+            component={this.renderField}
+          />
+          <Field
+            label="Post content"
+            name="content"
+            component={this.renderField}
+          />
+          <button type="submit" className="btn btn-primary">Save</button>
+          <Link className="btn btn-danger" to="/">
+            Cancel
+          </Link>
+        </form>
+      </div>
     );
   }
 }
