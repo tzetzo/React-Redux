@@ -9,7 +9,7 @@ module.exports = {
     loaders: [
       {
         exclude: /node_modules/,
-        loader: 'babel',
+        loader: 'babel-loader',
         query: {
           presets: ['react', 'es2015', 'stage-1']
         }
@@ -23,6 +23,7 @@ module.exports = {
     historyApiFallback: true,
     contentBase: './',
     inline: true,
+    port:8080,
     watchOptions: {
       aggregateTimeout: 300,
       poll: 1000
