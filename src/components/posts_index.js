@@ -13,8 +13,8 @@ class PostsIndex extends Component {
     //the first time the component renders the this.props.posts is an empyy object and the second has the posts objects
     return _.map(this.props.posts, post => {  //standard JS map() cannot be used on objects
       return (
-        <li className="list-group-item" key={post.id} >
-          <Link to={`/posts/${post.id}`}>
+        <li className="list-group-item" key={post._id} >
+          <Link to={`/posts/${post._id}`}>
             {post.title}
           </Link>
         </li>
