@@ -24,7 +24,7 @@ class PostsIndex extends Component {
 
   render() {
     return (
-      <div className="jumbotron">
+      <div className="jumbotron modal-dialog">
         <div className="table">
             <Link className="btn btn-primary  pull-xs-right" to="/posts/new">
               Add a Post

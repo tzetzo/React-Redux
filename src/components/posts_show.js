@@ -26,7 +26,7 @@ class PostsShow extends Component {
     }
 
     return (
-      <div className="jumbotron">
+      <div className="jumbotron modal-dialog">
         <div className="table">
           <Link to="/" className='btn btn-primary'>Back to Index</Link>
           <button

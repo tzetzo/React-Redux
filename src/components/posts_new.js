@@ -36,7 +36,7 @@ class PostsNew extends Component {
     const { handleSubmit } = this.props;  //passed to our component from reduxForm
 
     return (
-      <div className="jumbotron">
+      <div className="jumbotron modal-dialog">
         <form onSubmit={handleSubmit(this.onSubmit.bind(this))}> {/*handleSubmit calls validate and if no errors our custom onSubmit is called*/}
           <Field  //each Field represents an HTML input field
             label="Title"   //will be passed to the field argument of the renderField function; you can pass as many arguments as you need
